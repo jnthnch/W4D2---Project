@@ -1,0 +1,46 @@
+<h1>Edit A Cat!!</h1>
+
+<form class="" action=" <%= cat_url %>" method="post">
+  <input type="hidden" name="_method" value="PATCH">
+  
+
+  <label for="name">Cat's Name:</label>
+  <input type="text" name="cat[name]" value=" <%= @cat.name %>">
+  <br><br>
+  
+  <label for="sex">Cat's Sex:</label><br>
+    <!-- <%# if @cat.sex == "Male" %> -->
+    <input type="radio" name="cat[sex]" value="male" <%= "checked" if @cat.sex == 'M' %>> Male<br>
+    <input type="radio" name="cat[sex]" value="female" <%= "checked" if @cat.sex == 'F' %>> Female <br>
+      <!-- <%# else %> -->
+      <!-- <input type="radio" name="cat[sex]" value="male"> Male<br>
+      <input checked type="radio" name="cat[sex]" value="female"> Female <br>
+    <%# end %> -->
+  
+  <br>
+<!--  if logic -->
+  <label for="color">Cat's Color:</label> 
+    <select id="color" name="cat[color]">
+      
+      <option disable selected>-- Please Select --</option> 
+      <option value="orange" <%= @cat.color == 'orange' ? "selected" : ""%> >orange</option>
+      <option value="gold" <%= @cat.color == 'gold' ? "selected" : ""%> >gold</option>
+      <option value="brown" <%= @cat.color == 'brown' ? "selected" : ""%> >brown</option>
+      <option value="black" <%= @cat.color == 'black' ? "selected" : ""%> >black</option>
+      <option value="green" <%= @cat.color == 'green' ? "selected" : ""%> >green</option>
+    </select>
+  
+  <br>
+  <br>
+  <label for="date">Birthdate:</label>
+  <input type="date" name="cat[date]" value="<%= @cat.birth_date %>">
+  <br>
+  <br>
+  <label for="description">Cat Description:</label>
+  <br>
+  <textarea name="description" rows="8" cols="80" ><%= @cat.description %></textarea>
+    
+  <br><br>
+  <input type="submit" name="" value="Add Cat">
+  
+</form>

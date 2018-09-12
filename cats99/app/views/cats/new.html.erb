@@ -1,0 +1,37 @@
+<h1>Make a new Cat!!</h1>
+
+<form class="" action="index.html" method="post">
+  <label for="name">Cat's Name:</label>
+  <input type="text" name="cat[name]" value="">
+  <br><br>
+  
+  <label for="sex">Cat's Sex:</label><br>
+  <input type="radio" name="cat[sex]" value="male"> Male<br>
+  <input type="radio" name="cat[sex]" value="female"> Female <br>
+  
+  <br>
+
+  <label for="color">Cat's Color:</label>
+    <select id="color" name="cat[color]">
+      <option value = "" disabled selected >-- Select Color --</option>
+      <option value="orange">orange</option>
+      <option value="gold">gold</option>
+      <option value="brown">brown</option>
+      <option value="black">black</option>
+      <option value="leopard-print">leopard-print</option>
+    </select>
+  
+  <br>
+  <br>
+  <label for="date">Birthdate:</label>
+  <input type="date" name="cat[date]" value="">
+  <br>
+  <br>
+  <label for="description">Cat Description:</label>
+  <br>
+  <textarea name="description" rows="8" cols="80"></textarea>
+    
+  <br><br>
+  <input type="submit" name="" value="Add Cat">
+  
+</form>
